@@ -3,123 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Deshkar - CV</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Senior Frontend Engineer with experience in React, Next.js, and modern web technologies">
+    <title>Deepak Deshkar - Senior Frontend Engineer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+        }
+        
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+            .container { margin: 0; max-width: 100%; }
+            .section { break-inside: avoid; }
+            .page-break { page-break-before: always; }
+        }
+
+        /* Mobile-first responsive design */
+        @media screen and (max-width: 640px) {
+            .container { padding: 16px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            .skill-item { margin-bottom: 8px; }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 p-8">
-    <div class="max-w-4xl mx-auto">
-        <!-- Download Button -->
-        <button onclick="downloadPDF()" class="mb-8 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 fixed top-4 right-4">
-            Download PDF
-        </button>
+<body class="bg-gray-50">
+    <!-- Download Button - Fixed for mobile -->
+    <button onclick="downloadPDF()" class="no-print fixed top-4 right-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm md:text-base hover:bg-blue-700 transition-colors">
+        Download Resume as PDF
+    </button>
 
+    <!-- Main Container with mobile padding -->
+    <div class="container max-w-4xl mx-auto p-4 md:p-8">
         <!-- CV Content -->
-        <div id="cv-content" class="bg-white p-8 shadow-lg">
-            <!-- Header -->
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">DEEPAK DESHKAR</h1>
-                <p class="text-xl text-gray-700 mb-2">Senior Software Engineer</p>
-                <p class="text-gray-600">
-                    Bengaluru, Karnataka<br>
-                    deepakde796@gmail.com | +91 9977707333
-                </p>
-            </div>
-
-            <!-- Professional Summary -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">PROFESSIONAL SUMMARY</h2>
-                <p class="text-gray-700">
-                    Experienced Frontend Software Engineer with 5+ years of progressive experience in frontend development and technical leadership. Specialized in architecting scalable web applications using modern JavaScript frameworks and implementing robust UI/UX solutions. Proven track record in leading AI and fintech projects, with expertise in building high-performance applications that drive business growth and user engagement.
-                </p>
-            </div>
-
-            <!-- Technical Expertise -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">TECHNICAL EXPERTISE</h2>
-                <div class="space-y-2">
-                    <p class="text-gray-700"><span class="font-semibold">Frontend Technologies:</span> React.js, Next.js, Angular, TypeScript, JavaScript (ES6+), HTML5, CSS3</p>
-                    <p class="text-gray-700"><span class="font-semibold">UI Frameworks:</span> Tailwind CSS, Bootstrap, Material-UI, Styled Components</p>
-                    <p class="text-gray-700"><span class="font-semibold">State Management:</span> Redux, Redux Toolkit, Zustand, React Query, Context API</p>
-                    <p class="text-gray-700"><span class="font-semibold">Mobile Development:</span> React Native, Ionic Framework</p>
-                    <p class="text-gray-700"><span class="font-semibold">Version Control & CI/CD:</span> Git, GitHub, Bitbucket, Jenkins</p>
-                    <p class="text-gray-700"><span class="font-semibold">Development Tools:</span> JIRA, Confluence, Figma, Chrome DevTools, Postman</p>
-                    <p class="text-gray-700"><span class="font-semibold">AI Development Tools:</span> Cursor.sh, GitHub Copilot, ChatGPT, Amazon CodeWhisperer</p>
-                    <p class="text-gray-700"><span class="font-semibold">Productivity Tools:</span> Docker, Webpack, Vite, ESLint, Prettier</p>
-                    <p class="text-gray-700"><span class="font-semibold">Testing:</span> Jest, React Testing Library, Cypress</p>
-                    <p class="text-gray-700"><span class="font-semibold">API Integration:</span> RESTful APIs, GraphQL, WebSocket</p>
+        <div id="cv-content" class="bg-white p-6 md:p-8 shadow-lg rounded-lg">
+            <!-- Header - ATS optimized with semantic HTML -->
+            <header class="mb-8">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">DEEPAK DESHKAR</h1>
+                <h2 class="text-lg md:text-xl text-gray-700 mb-2">Senior Frontend Engineer</h2>
+                <div class="text-gray-600 space-y-1">
+                    <p>Location: Bengaluru, Karnataka</p>
+                    <p>Email: deepakde796@gmail.com</p>
+                    <p>Phone: +91 9977707333</p>
                 </div>
-            </div>
+            </header>
 
-            <!-- Professional Experience -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">PROFESSIONAL EXPERIENCE</h2>
+            <!-- Professional Summary - Clear text for ATS -->
+            <section class="mb-6">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200">PROFESSIONAL SUMMARY</h2>
+                <p class="text-gray-700">
+                    Senior Frontend Software Engineer with 5+ years of experience in web development and technical leadership. Expertise in React.js, Next.js, and modern JavaScript frameworks. Proven track record in leading teams and delivering high-performance applications for AI and fintech domains. Frontend Developer, Front End Engineer, UI Developer specializing in responsive web applications and user interface development.
+                </p>
+            </section>
+
+            <!-- Skills - ATS-friendly format -->
+            <section class="mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200">TECHNICAL SKILLS</h2>
+                <div class="space-y-3">
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">Programming & Markup Languages:</h3>
+                        <p>JavaScript (ES6+), TypeScript, HTML5, CSS3, JSX, TSX</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">Frontend Frameworks & Libraries:</h3>
+                        <p>React.js, Next.js, Angular, React Native</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">UI Technologies:</h3>
+                        <p>Tailwind CSS, Bootstrap, Material-UI, Styled Components, SASS, LESS</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">State Management & Data Flow:</h3>
+                        <p>Redux, Redux Toolkit, Zustand, React Query, Context API, MobX</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">Development Tools & Practices:</h3>
+                        <p>Git, GitHub, Bitbucket, Jenkins, JIRA, Agile Methodologies</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">Testing & Quality Assurance:</h3>
+                        <p>Jest, React Testing Library, Cypress, Unit Testing, E2E Testing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="font-semibold mb-1">AI & Development Tools:</h3>
+                        <p>Cursor.sh, GitHub Copilot, ChatGPT, Amazon CodeWhisperer</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience - ATS-friendly structure -->
+            <section class="mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200">PROFESSIONAL EXPERIENCE</h2>
                 
-                <!-- Current Role -->
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-800">Senior Frontend Engineer | 3Embed Software Technologies Pvt Ltd </h3>
-                    <p class="text-gray-600 italic mb-2">Apr 2022 - Present</p>
-                    <div class="ml-4">
-                        <p class="font-semibold mb-2">Lead Frontend Developer - AI Chatbot Platform</p>
-                        <ul class="list-disc ml-4 text-gray-700 space-y-2">
-                            <li>Spearheaded the development of an enterprise-grade AI chatbot platform, leading a team of 4 developers</li>
-                            <li>Architected and implemented the frontend infrastructure using Next.js 13, incorporating server-side rendering for optimal performance</li>
-                            <li>Designed and implemented real-time chat functionality using WebSocket, handling concurrent user sessions</li>
-                            <li>Reduced initial load time by 40% through code splitting and lazy loading implementation</li>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800">Senior Frontend Engineer</h3>
+                    <p class="text-gray-700">Company: 3Embed Software Technologies Pvt Ltd</p>
+                    <p class="text-gray-700 mb-3">Duration: April 2022 - Present</p>
+                    
+                    <div class="ml-0 md:ml-4">
+                        <h4 class="font-semibold mb-2">Lead Frontend Developer - AI Chatbot Platform</h4>
+                        <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                            <li>Led development of enterprise AI chatbot platform, managing team of 4 developers</li>
+                            <li>Implemented frontend architecture using Next.js 13 with server-side rendering</li>
+                            <li>Developed real-time chat system with WebSocket for concurrent user sessions</li>
+                            <li>Improved application performance by 40% through optimization techniques</li>
                         </ul>
-                        <p class="font-semibold mt-4 mb-2">Technical Lead - Fintech Solutions</p>
-                        <ul class="list-disc ml-4 text-gray-700 space-y-2">
-                            <li>Led the development of financial dashboard with real-time data visualization</li>
-                            <li>Implemented micro-frontend architecture for scalable application development</li>
-                            <li>Achieved 99.9% uptime through robust error handling and fallback mechanisms</li>
+
+                        <h4 class="font-semibold mt-4 mb-2">Technical Lead - Fintech Solutions</h4>
+                        <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                            <li>Architected financial dashboard with real-time data visualization</li>
+                            <li>Implemented micro-frontend architecture for scalable applications</li>
+                            <li>Maintained 99.9% uptime through robust error handling</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Previous Roles -->
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-800">Frontend Developer | Hie HQ</h3>
-                    <p class="text-gray-600 italic mb-2">May 2020 - Mar 2022</p>
-                    <ul class="list-disc ml-8 text-gray-700 space-y-2">
-                        <li>Developed high-performance stock trading interface handling real-time market data</li>
-                        <li>Implemented advanced charting features using D3.js and TradingView integration</li>
-                        <li>Built reusable component library reducing development time by 30%</li>
-                        <li>Optimized application performance achieving sub-second trading execution</li>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800">Frontend Developer</h3>
+                    <p class="text-gray-700">Company: Hie HQ</p>
+                    <p class="text-gray-700 mb-3">Duration: May 2020 - March 2022</p>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                        <li>Developed stock trading platform with real-time market data integration</li>
+                        <li>Built advanced charting features using D3.js and TradingView</li>
+                        <li>Created reusable component library improving development efficiency by 30%</li>
                     </ul>
                 </div>
 
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-800">Web Developer | Foxaisr Technology Private Limited</h3>
-                    <p class="text-gray-600 italic mb-2">Jun 2019 - Apr 2020</p>
-                    <ul class="list-disc ml-8 text-gray-700 space-y-2">
-                        <li>Developed responsive web applications and hybrid mobile apps</li>
-                        <li>Created cross-platform mobile applications using Ionic Framework</li>
-                        <li>Implemented pixel-perfect designs with focus on accessibility standards</li>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800">Web Developer</h3>
+                    <p class="text-gray-700">Company: Foxaisr Technology Private Limited</p>
+                    <p class="text-gray-700 mb-3">Duration: June 2019 - April 2020</p>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                        <li>Built responsive web applications and hybrid mobile apps</li>
+                        <li>Developed cross-platform applications using Ionic Framework</li>
+                        <li>Implemented accessible and responsive user interfaces</li>
                     </ul>
                 </div>
-            </div>
+            </section>
 
             <!-- Education -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">EDUCATION</h2>
-                <p class="text-gray-700 font-semibold">Bachelor of Engineering in Computer Science</p>
-                <p class="text-gray-600">University Name | 2019</p>
-            </div>
+            <section class="mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200">EDUCATION</h2>
+                <p class="font-semibold">Bachelor of Engineering in Computer Science</p>
+                <p class="text-gray-700">Institution: University Name</p>
+                <p class="text-gray-700">Graduation Year: 2019</p>
+            </section>
 
             <!-- Languages -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">LANGUAGES</h2>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="text-gray-700">• English (Professional)</div>
-                    <div class="text-gray-700">• Hindi (Professional)</div>
-                    <div class="text-gray-700">• Marathi (Professional)</div>
-                </div>
-            </div>
+            <section>
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200">LANGUAGES</h2>
+                <p class="text-gray-700">English (Professional Working Proficiency)</p>
+                <p class="text-gray-700">Hindi (Professional Working Proficiency)</p>
+                <p class="text-gray-700">Marathi (Professional Working Proficiency)</p>
+            </section>
         </div>
     </div>
 
@@ -127,11 +169,21 @@
         function downloadPDF() {
             const element = document.getElementById('cv-content');
             const opt = {
-                margin: [10 , 5, 5, 10],
+                margin: [10, 5, 5, 10],
                 filename: 'Deepak_Deshkar_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2.5, logging: true, dpi: 192, letterRendering: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                image: { type: 'jpeg', quality: 0.98},
+                html2canvas: { 
+                    scale: 2.5,
+                    logging: true,
+                    dpi: 192,
+                    letterRendering: true,
+                    useCORS: true
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait'
+                }
             };
 
             html2pdf().set(opt).from(element).save();

@@ -1,0 +1,56 @@
+# Professional CV Template By Deepak Deshkar
+
+A modern, responsive, and ATS-friendly CV/resume template built with HTML, Tailwind CSS, and enhanced with professional typography. Features one-click PDF export functionality.
+
+## 🚀 Features
+
+- **ATS-Optimized Structure**: Carefully formatted for Applicant Tracking Systems
+- **Responsive Design**: Perfect viewing on all devices
+- **One-Click PDF Export**: Easy download with html2pdf.js
+- **Professional Typography**: Using Inter & Lato fonts for optimal readability
+- **Print-Friendly**: Optimized for both digital viewing and printing
+- **Customizable**: Easy to modify sections and styling
+
+## 🛠️ Technologies Used
+
+- HTML5
+- Tailwind CSS
+- JavaScript
+- html2pdf.js
+- Google Fonts (Inter & Lato)
+
+## 📋 Sections
+
+- Professional Summary
+- Core Competencies
+- Technical Expertise
+- Professional Experience
+- Education
+- Languages
+- AI & Development Tools
+
+## 🔧 Setup & Usage
+
+1. Clone the repository
+2. Open `index.html` in your browser
+3. Customize the content
+4. Click "Download PDF" to export
+
+## 📱 Responsive Design
+
+- Mobile-friendly layout
+- Optimized for all screen sizes
+- Print-ready formatting
+
+## 🎨 Customization
+
+- Easy to modify styles
+- Configurable sections
+- Flexible layout options
+
+## 📄 License
+
+MIT License - Feel free to use and modify for your personal use.
+
+---
+Made with ❤️ by Deepak Deshkar
